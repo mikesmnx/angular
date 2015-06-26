@@ -26,7 +26,6 @@ app.controller('goCtrl', function($scope, $http, goService, alertService) {
 		var result = '';
 		goService.newMove($scope.town, $scope.towns.join(',')).then(function(data) {
 			var state = data.data.state;
-			console.log(state);
 			
 			switch (state) {
 				case 'wrong_letter':
@@ -80,10 +79,6 @@ app.factory('goService', function($http) {
 
 app.controller('alertCtrl', function($scope, alertService) {
 	$scope.alerts = alertService.alerts;
-	
-	$scope.test = function() {
-		console.log('alert ctrl log');
-	};
 });
 
 app.factory('alertService', function($rootScope) {
