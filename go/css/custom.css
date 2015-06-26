@@ -1,0 +1,9 @@
+.panel-fixed {
+	min-height: 10px;
+	max-height: 350px;
+	overflow-y: scroll;
+}
+
+.upc {
+	text-transform: uppercase;
+}
