@@ -1,0 +1,60 @@
+﻿<div ng-controller="GameController as ctrl">
+	<div class="jumbotron">
+		<h1>Hangman</h1>
+		<p>Angular, Bootstrap, капелька jquery и node. Игра на клиентском и серверном js.</p>
+	</div>
+
+	<div id="game-container">
+		<div taskgrid ng-model="ctrl.game" class="row"></div>
+		<div heartsgrid ng-model="ctrl.game" class="row"></div>
+		<div keyboard ng-model="ctrl.game" class="row"></div>
+	</div>
+	
+	<div id="game-buttons">
+		<button ng-click="ctrl.newGame()">Начать заново</button> <button ng-click="ctrl.openTask()">Показать задание</button> 
+	</div>
+</div>
+
+<div id="modalwin" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Ура-ура!</h4>
+			</div>
+				
+			<div class="modal-body">
+				<p>Невероятно.</p>
+				<p>Наши поздравления!</p>
+				<p>Вы победили!!!</p>
+			</div>
+				
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default"data-dismiss="modal">Закрыть</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="modallost" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Не вышло</h4>
+			</div>
+				
+			<div class="modal-body">
+				<p>Может быть в следующий раз?</p>
+				<p>Попробуете?</p>
+				<p>Получится!</p>
+			</div>
+				
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default"data-dismiss="modal">Закрыть</button>
+			</div>
+		</div>
+	</div>
+</div>

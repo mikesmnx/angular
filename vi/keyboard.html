@@ -1,0 +1,7 @@
+﻿<div id="keyboard" ng-controller="KeyboardController">
+	<div class="keyboardrow">
+		<span ng-repeat="cell in ngModel.keyboard track by $index">
+			<button ng-click="click($index)" class="btn btn-lg btn-info btn-mrg" ng-class="{disabled: ngModel.keyboard[$index].disabled}">{{ngModel.keyboard[$index].value}}</button>
+		</span>
+	</div>
+</div>

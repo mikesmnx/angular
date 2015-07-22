@@ -1,0 +1,3 @@
+﻿<div id="taskgrid">
+	<button class="btn btn-lg btn-mrg disabled" ng-repeat="cell in ngModel.task track by $index" ng-class="{bigfont: !ngModel.task[$index].opened}">{{ngModel.task[$index].opened ? ngModel.task[$index].value : '*'}}</button>
+</div>
